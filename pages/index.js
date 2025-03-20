@@ -19,19 +19,18 @@ export default function Home() {
       <Head>
         <title>WanderWorth</title>
       </Head>
-      <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="bg-white/80 p-10 rounded-xl shadow-xl text-center backdrop-blur-md">
-        <h1 className="text-5xl mb-6 font-extrabold text-gray-800">WanderWorth</h1>
+      <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col items-center justify-center">
+        <h1 className="text-6xl mb-12 font-extrabold text-white drop-shadow-lg">WanderWorth</h1>
         <form onSubmit={handleSubmit} className="w-full flex items-center justify-center">
           <input
             type="number"
             value={budget}
             onChange={(e) => setBudget(e.target.value)}
-            className="w-full max-w-md p-4 rounded-full text-center focus:outline-none focus:ring-2 focus:ring-purple-400 text-xl"
+            className="w-full max-w-2xl p-6 rounded-full text-center text-xl focus:outline-none focus:ring-4 focus:ring-purple-400 shadow-lg backdrop-blur-md bg-white/80"
             placeholder="Enter your budget..."
             autoFocus
           />
         </form>
-        <p className="mt-6 text-gray-500">Press <kbd>/</kbd> to focus</p>
       </motion.div>
       <script>
         {`
